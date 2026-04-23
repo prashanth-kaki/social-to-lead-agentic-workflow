@@ -21,7 +21,7 @@ class AgentState(TypedDict):
     collected_details: dict
 
 # Initialize LLM
-llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0.0)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.0)
 
 # RAG Setup: Load Knowledge Base into an in-memory FAISS VectorStore
 current_dir = os.path.dirname(os.path.abspath(__file__))
