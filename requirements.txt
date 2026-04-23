@@ -1,0 +1,8 @@
+langchain
+langchain-community
+langgraph
+langchain-google-genai
+faiss-cpu
+gradio
+python-dotenv
+tiktoken
