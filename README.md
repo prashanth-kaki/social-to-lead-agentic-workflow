@@ -6,7 +6,7 @@
 
 An intelligent, stateful Conversational AI Agent for **AutoStream**—a fictional SaaS platform for content creators. This project implements a sophisticated multi-turn workflow with intent routing, context-aware retrieval, and lead capturing functionalities using LangGraph and Google's Gemini models.
 
-## 🌟 Key Features
+## Key Features
 
 - **Dynamic Intent Classification**: Analyzes the user's input to predict their intent (e.g., *Greeting*, *Pricing Inquiry*, or *High-Intent Lead*) and routes the conversation to the appropriate specialized node.
 - **RAG-Powered Knowledge Retrieval**: Intercepts pricing and policy questions, retrieving precise context from an embedded FAISS vector store to generate accurate, grounded responses.
@@ -15,7 +15,7 @@ An intelligent, stateful Conversational AI Agent for **AutoStream**—a fictiona
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 The agent is constructed as a stateful graph utilizing **LangChain** and **LangGraph**. Each user message is processed through the following pipeline:
 
@@ -26,7 +26,7 @@ The agent is constructed as a stateful graph utilizing **LangChain** and **LangG
 
 ---
 
-## 🛠️ Setup and Installation
+## Setup and Installation
 
 Follow these steps to run the agent locally.
 
@@ -57,7 +57,7 @@ GOOGLE_API_KEY="your_google_api_key_here"
 
 ---
 
-## 💻 How to Use
+## How to Use
 
 To start interacting with the agent, launch the local Gradio application:
 
@@ -74,7 +74,7 @@ Once running, the terminal will display a local URL (typically `http://127.0.0.1
 
 ---
 
-## 🏗️ Architecture Decisions
+## Architecture Decisions
 
 ### Why LangGraph?
 LangGraph was chosen for its ability to provide highly controllable, deterministic cyclic graphs. Unlike fully autonomous agent frameworks (like AutoGen) which can sometimes loop unpredictably, LangGraph allows for explicit structural edges. This makes the router and state checkpoints highly predictable—a critical requirement for enterprise-grade customer-facing chatbots.
@@ -84,7 +84,7 @@ State is managed across multi-turn interactions utilizing LangGraph's `checkpoin
 
 ---
 
-## 📱 WhatsApp Webhook Deployment Strategy
+## WhatsApp Webhook Deployment Strategy
 
 To deploy this agent to a production WhatsApp environment:
 1. **Infrastructure**: Expose a backend service (e.g., FastAPI wrapping `agent_app.invoke()`) using a reverse proxy or serverless endpoints.
