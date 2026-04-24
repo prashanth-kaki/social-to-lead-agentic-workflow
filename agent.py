@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 import json
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 # Define the State
 class AgentState(TypedDict):
